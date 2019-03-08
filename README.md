@@ -26,7 +26,42 @@ $ npm i babel-plugin-transform-inline
 ## Usage
 
 ```js
-import babel_plugin_transform_inline from 'babel-plugin-transform-inline'
+// `inline` keyword to decorate a normal function
+inline function minus (a, b) {
+  return a - b
+}
+
+// Arrow function
+const plus = inline (a, b) => a + b
+
+class Foo {
+  constructor (num) {
+    this._num = _num
+  }
+
+  // class methods are also supported
+  inline _plus (amount) {
+    return plus(this._num, amount)
+  }
+
+  minus (amount) {
+    return this._plus(minus(0, amount))
+  }
+}
+```
+
+Out:
+
+```js
+class Foo {
+  constructor (num) {
+    this._num = _num
+  }
+
+  minus (amount) {
+    return (this._num + (0 - amount))
+  }
+}
 ```
 
 ## License

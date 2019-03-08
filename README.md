@@ -15,7 +15,7 @@
 
 # babel-plugin-transform-inline
 
-<!-- description -->
+Allow inline keywords before functions and class methods.
 
 ## Install
 

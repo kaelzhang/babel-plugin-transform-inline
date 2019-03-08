@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-inline",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "babel-plugin-transform-inline",
   "main": "src/index.js",
   "scripts": {
